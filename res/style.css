@@ -25,6 +25,9 @@ body {
     font-size: var(--font-size);
     font-family: var(--sans);
     background: var(--bg-secondary);
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 h1 {
@@ -61,21 +64,56 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--condensed);
 }
 
+
+
+.marginless {
+    margin: 0;
+}
+
+.padded {
+    padding: var(--padding-standard);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
 .iconic {
     font-family: var(--iconic);
 }
+
+.a-button {
+    display: inline-block;
+    padding: 5px;
+    background: var(--ac-secondary);
+    color: var(--ac-primary);
+    text-decoration: none;
+    line-height: 1em;
+}
+
+
+
+.site-icon {
+    padding: 5px;
+    margin: 5px;
+}
+
+.circle-clip {
+    clip-path: circle(32px at center);
+    border-radius: 15px;
+}
+
 
 
 .flex-row {
     display: flex;
     flex-flow: row nowrap;
-    padding: var(--padding-standard);
+    align-items: center;
 }
 
 .flex-column {
     display: flex;
     flex-flow: column nowrap;
-    padding: var(--padding-standard);
 }
 
 .col-left {
@@ -89,7 +127,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
 header, footer {
     background: var(--ac-primary);
+    color: var(--ac-secondary);
+}
+
+#root {
+    padding: calc(var(--padding-standard) / 2);
+    flex-grow: 1;
+}
+
+section {
+    padding: calc(var(--padding-standard) / 2);
+    background: var(--bg-primary);
+    color: var(--fg-primary);
+    font-family: var(--serif);
+    margin: var(--padding-standard) 0;
+}
+
+address {
+    font-style: normal;
+}
+
+a {
     color: var(--ac-secondary);
 }
