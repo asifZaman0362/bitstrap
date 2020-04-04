@@ -4,6 +4,15 @@
     --sans: 'Roboto';
     --condensed: 'Roboto Condensed';
     --mono: 'Fira Mono';
+    --iconic: 'iconmonstr-iconic-font';
+
+    --bg-primary: white;
+    --bg-secondary: lightgray;
+    --fg-primary: black;
+    --ac-primary: darkred;
+    --ac-secondary: white;
+
+    --padding-standard: 20px;
 }
 
 html, body {
@@ -15,6 +24,7 @@ body {
     padding: 0;
     font-size: var(--font-size);
     font-family: var(--sans);
+    background: var(--bg-secondary);
 }
 
 h1 {
@@ -49,4 +59,37 @@ h6 {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--condensed);
+}
+
+.iconic {
+    font-family: var(--iconic);
+}
+
+
+.flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: var(--padding-standard);
+}
+
+.flex-column {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: var(--padding-standard);
+}
+
+.col-left {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.col-right {
+    flex-grow: 1;
+    text-align: right;
+}
+
+
+header, footer {
+    background: var(--ac-primary);
+    color: var(--ac-secondary);
 }
